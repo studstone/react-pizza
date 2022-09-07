@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   body {
@@ -24,11 +24,6 @@ const GlobalStyle = createGlobalStyle`
     padding-bottom: 6.3rem;
     background-color: ${variable.bodyBgColor};
     color: ${variable.primaryTextColor};
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 
   a {

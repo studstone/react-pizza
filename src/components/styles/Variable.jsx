@@ -2,6 +2,7 @@ export const variable = {
     bodyBgColor: '#ffdf8c',
     wrapperBgColor: '#ffffff',
     buttonBgColor: '#fe5f1e',
+    buttonBgColorHover: '#FFFFFF',
     tabBgColor: '#f9f9f9',
     heartLikeFill: '#ff8585',
     primaryTextColor: '#000000',

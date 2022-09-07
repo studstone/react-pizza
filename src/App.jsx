@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./components/Header/Header";
 import GlobalStyle, { Wrapper } from "./components/styles/GlobalStyle";
 
 
@@ -7,7 +8,7 @@ function App() {
         <>
             <GlobalStyle />
             <Wrapper>
-                efdsdsfdsf
+                <Header />
             </Wrapper>
         </>
     );
