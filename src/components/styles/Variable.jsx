@@ -1,0 +1,15 @@
+export const variable = {
+    bodyBgColor: '#ffdf8c',
+    wrapperBgColor: '#ffffff',
+    buttonBgColor: '#fe5f1e',
+    tabBgColor: '#f9f9f9',
+    heartLikeFill: '#ff8585',
+    primaryTextColor: '#000000',
+    secondaryTextColor: '#2c2c2c',
+    btnTextColor: '#ffffff',
+    btnTextColorHover: '#eb5a1e',
+    logoPrimaryTextColor: '#181818',
+    logoSecondaryTextColor: '#7b7b7b',
+    boldWeight: 700,
+    regulardWeight: 400,
+};
