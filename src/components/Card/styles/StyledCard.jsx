@@ -68,10 +68,12 @@ export const Price = styled.span`
 `;
 
 export const Button = styled.button`
-    padding: 1.1rem 1.8rem 1.1rem 1.8rem;
+    position: relative;
+    width: ${({ active }) => (active ? '15.5rem' : '13.2rem')};
+    padding: 1.1rem 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 1.8rem;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -94,6 +96,10 @@ export const Button = styled.button`
 `;
 
 export const Counter = styled.span`
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.4rem;
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
@@ -101,7 +107,6 @@ export const Counter = styled.span`
     font-size: 13px;
     line-height: 22px;
     background-color: ${variable.buttonBgColorHover};
-    margin-left: 0.5rem;
     color: ${variable.btnTextColorHover};
     transition: all 0.4s ease-in-out;
 `;
