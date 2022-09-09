@@ -69,7 +69,6 @@ export default GlobalStyle;
 
 export const Wrapper = styled.div`
   width: 134rem;
-  min-height: 100vh;
   background-color: ${variable.wrapperBgColor};
   margin: 0 auto;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);

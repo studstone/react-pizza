@@ -4,6 +4,7 @@ export const variable = {
     buttonBgColor: '#fe5f1e',
     buttonBgColorHover: '#FFFFFF',
     tabBgColor: '#f9f9f9',
+    tabBgColorActive: '#282828',
     heartLikeFill: '#ff8585',
     primaryTextColor: '#000000',
     secondaryTextColor: '#2c2c2c',
@@ -11,6 +12,4 @@ export const variable = {
     btnTextColorHover: '#eb5a1e',
     logoPrimaryTextColor: '#181818',
     logoSecondaryTextColor: '#7b7b7b',
-    boldWeight: 700,
-    regulardWeight: 400,
 };
