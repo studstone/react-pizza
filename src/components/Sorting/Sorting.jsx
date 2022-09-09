@@ -1,5 +1,6 @@
 import React from 'react';
 import { SortingText, SortingVariable, SortingWrapper } from './styles/SryledSorting';
+import Variants from './Variants';
 
 const Sorting = () => {
     console.log();
@@ -16,6 +17,7 @@ const Sorting = () => {
             </svg>
             <SortingText>Сортировка по:</SortingText>
             <SortingVariable>по популярности</SortingVariable>
+            <Variants />
         </SortingWrapper>
     );
 };
