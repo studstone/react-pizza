@@ -6,7 +6,7 @@ import {
     HeaderSubTitle, HeaderTitle, HeaderWrapper, LogoDescription,
     LogoImg, LogoLink
 } from './styles/StyledHeader';
-import Logo from '../../images/logo.png';
+import Logo from '../../assets/images/logo.png';
 import Cart from './Cart';
 
 const Header = () => (

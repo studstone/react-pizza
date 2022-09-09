@@ -3,7 +3,7 @@ import {
     Button, CardBottom, CardWrapper, Counter, ImageBlock, Option, Options, PizzaName,
     Price
 } from './styles/StyledCard';
-import Pizza from '../../images/pizza.png';
+import Pizza from '../../assets/images/pizza.png';
 
 const Card = () => {
     console.log();
