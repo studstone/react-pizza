@@ -26,7 +26,6 @@ export const TabItem = styled.li`
     }
 
     :hover {
-        background-color: ${variable.tabBgColorActive};
-        color: ${variable.btnTextColor};
+        background-color: ${({ active }) => (active ? '' : `${variable.tabBgColorHover}`)};
     }
 `;

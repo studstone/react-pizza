@@ -7,7 +7,7 @@ const Сategories = () => {
 
     return (
         <TabsList>
-            <TabItem active>Все</TabItem>
+            <TabItem>Все</TabItem>
             <TabItem>Мясные</TabItem>
             <TabItem>Вегетарианские</TabItem>
             <TabItem>Гриль</TabItem>

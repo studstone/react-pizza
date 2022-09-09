@@ -15,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    max-width: 144rem;
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;

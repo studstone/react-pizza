@@ -5,6 +5,7 @@ export const variable = {
     buttonBgColorHover: '#FFFFFF',
     tabBgColor: '#f9f9f9',
     tabBgColorActive: '#282828',
+    tabBgColorHover: '#2828282d',
     heartLikeFill: '#ff8585',
     primaryTextColor: '#000000',
     secondaryTextColor: '#2c2c2c',
