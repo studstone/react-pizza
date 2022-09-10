@@ -2,17 +2,21 @@ import React from 'react';
 import { TabItem, TabsList } from './styles/StyledCategories';
 
 
-const Сategories = () => {
+const Сategories = ({ activeIndex, hendlerActive, categories }) => {
     console.log();
 
     return (
         <TabsList>
-            <TabItem>Все</TabItem>
-            <TabItem>Мясные</TabItem>
-            <TabItem>Вегетарианские</TabItem>
-            <TabItem>Гриль</TabItem>
-            <TabItem>Острые</TabItem>
-            <TabItem>Закрытые</TabItem>
+            {
+                categories.map((tab, index) =>
+                    <TabItem
+                        key={index}
+                        onClick={() => hendlerActive(index)}
+                        active={activeIndex === index}
+                    >
+                        {tab}
+                    </TabItem>)
+            }
         </TabsList>
     );
 };

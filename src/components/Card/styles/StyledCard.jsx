@@ -26,6 +26,7 @@ export const PizzaName = styled.h3`
     text-align: center;
     letter-spacing: 0.01em;
     margin-bottom: 2.2rem;
+    min-height: 4.8rem;
 `;
 
 export const Options = styled.ul`

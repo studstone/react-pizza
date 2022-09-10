@@ -23,4 +23,7 @@ export const ProductsTitle = styled.h1`
 
 export const CardsWrapper = styled.ul`
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem 6.16rem;
 `;
