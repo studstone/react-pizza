@@ -1,11 +1,13 @@
 import React from 'react';
 import {
-    Button, CardBottom, CardWrapper, Counter, ImageBlock, Option, Options, PizzaName,
+    Button, CardBottom, CardWrapper, Counter, ImageBlock, Option, Options, OptionsWrapper, PizzaName,
     Price
 } from './styles/StyledCard';
 
 const Card = ({ pizzas }) => {
     console.log();
+    const typesName = ['тонкое', 'традиционное'];
+
     const [active, setActive] = React.useState(false);
 
     return (
@@ -17,15 +19,22 @@ const Card = ({ pizzas }) => {
                             <img src={pizza.imageUrl} alt="Pizza" />
                         </ImageBlock>
                         <PizzaName>{pizza.name}</PizzaName>
-                        <Options>
-                            <Option>тонкое</Option>
-                            <Option>традиционное</Option>
-                            {
-                                pizza.sizes.map((item, index) =>
-                                    <Option key={index}>{item} см.</Option>
-                                )
-                            }
-                        </Options>
+                        <OptionsWrapper>
+                            <Options>
+                                {
+                                    pizza.types.map((item, index) =>
+                                        <Option key={index}>{typesName[item]}</Option>
+                                    )
+                                }
+                            </Options>
+                            <Options>
+                                {
+                                    pizza.sizes.map((item, index) =>
+                                        <Option key={index}>{item} см.</Option>
+                                    )
+                                }
+                            </Options>
+                        </OptionsWrapper>
                         <CardBottom>
                             <Price>от {pizza.price} ₽</Price>
                             <Button>

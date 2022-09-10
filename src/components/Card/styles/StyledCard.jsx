@@ -29,15 +29,19 @@ export const PizzaName = styled.h3`
     min-height: 4.8rem;
 `;
 
-export const Options = styled.ul`
+export const OptionsWrapper = styled.div`
     padding: 0.7rem 0.5rem;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 7px 6px;
+    flex-direction: column;
     background: #f3f3f3;
     border-radius: 1rem;
     margin-bottom: 1.7rem;
+`;
+
+export const Options = styled.ul`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `;
 
 export const Option = styled.li`
