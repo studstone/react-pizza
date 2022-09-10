@@ -4,11 +4,9 @@ import {
     Price
 } from './styles/StyledCard';
 
-const Card = ({ pizzas }) => {
+const Card = ({ pizzas, activeTypes, activeSizes, hendlerActiveTypes, hendlerActiveSizes }) => {
     console.log();
     const typesName = ['тонкое', 'традиционное'];
-
-    const [active, setActive] = React.useState(false);
 
     return (
         <>
@@ -23,14 +21,26 @@ const Card = ({ pizzas }) => {
                             <Options>
                                 {
                                     pizza.types.map((item, index) =>
-                                        <Option key={index}>{typesName[item]}</Option>
+                                        <Option
+                                            key={index}
+                                            active={activeTypes === index}
+                                            onClick={() => hendlerActiveTypes(index)}
+                                        >
+                                            {typesName[index]}
+                                        </Option>
                                     )
                                 }
                             </Options>
                             <Options>
                                 {
                                     pizza.sizes.map((item, index) =>
-                                        <Option key={index}>{item} см.</Option>
+                                        <Option
+                                            key={index}
+                                            active={activeSizes === index}
+                                            onClick={() => hendlerActiveSizes(index)}
+                                        >
+                                            {item} см.
+                                        </Option>
                                     )
                                 }
                             </Options>
@@ -39,10 +49,10 @@ const Card = ({ pizzas }) => {
                             <Price>от {pizza.price} ₽</Price>
                             <Button>
                                 + Добавить
-                                {
+                                {/* {
                                     active &&
                                     <Counter>2</Counter>
-                                }
+                                } */}
                             </Button>
                         </CardBottom>
                     </CardWrapper >

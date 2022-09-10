@@ -42,6 +42,10 @@ export const Options = styled.ul`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    :first-child {
+        margin-bottom: 0.7rem;
+    }
 `;
 
 export const Option = styled.li`

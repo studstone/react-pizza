@@ -5,9 +5,11 @@ import { categories } from "./DB/categories";
 import { useActiveIndex } from "./hooks/useActiveIndex";
 import HomePages from "./pages/HomePage/HomePages";
 import { pizzas } from './DB/pizzas';
+import { useActiveOptions } from "./hooks/useActiveOptions";
 
 function App() {
     const activeIndex = useActiveIndex();
+    const activeOptions = useActiveOptions();
 
     return (
         <>
@@ -16,6 +18,7 @@ function App() {
                 <Header />
                 <HomePages
                     {...activeIndex}
+                    {...activeOptions}
                     categories={categories}
                     pizzas={pizzas}
                 />
