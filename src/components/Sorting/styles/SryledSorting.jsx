@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SortingWrapper = styled.div`
+    min-width: 23.3rem;
     position: relative;
     display: flex;
     align-items: center;

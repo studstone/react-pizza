@@ -19,7 +19,7 @@ export const VariantsItem = styled.li`
     letter-spacing: 0.015em;
     color: ${({ active }) => (active ? '#FE5F1E' : 'inherit')};
     background-color: ${({ active }) => (active ? 'rgba(254, 95, 30, 0.05)' : 'transparent')};
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     :hover {
         color: #FE5F1E;

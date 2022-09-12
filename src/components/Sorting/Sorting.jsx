@@ -4,9 +4,17 @@ import Variants from './Variants';
 
 const Sorting = () => {
     console.log();
+    const variants = ['по пулярности', 'по цене', 'по алфавиту'];
+    const [openVariants, setOpenVariants] = React.useState(false);
+    const [activeVariants, setAvtiveVariants] = React.useState(0);
+
+    const hendlerActiveVariant = index => {
+        setAvtiveVariants(index);
+        setOpenVariants(false);
+    };
 
     return (
-        <SortingWrapper>
+        <SortingWrapper active={openVariants} onClick={() => setOpenVariants(!openVariants)}>
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 5C10 5.16927 9.93815 5.31576 9.81445 5.43945C9.69075 5.56315
             9.54427 5.625 9.375 5.625H0.625C0.455729 5.625 0.309245 5.56315 0.185547
@@ -16,8 +24,13 @@ const Sorting = () => {
             5Z" fill="#2C2C2C" />
             </svg>
             <SortingText>Сортировка по:</SortingText>
-            <SortingVariable>по популярности</SortingVariable>
-            <Variants />
+            <SortingVariable>{variants[activeVariants]}</SortingVariable>
+            {openVariants &&
+                <Variants
+                    variants={variants}
+                    activeVariants={activeVariants}
+                    hendlerActiveVariant={hendlerActiveVariant}
+                />}
         </SortingWrapper>
     );
 };
