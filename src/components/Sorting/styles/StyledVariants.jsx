@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const VariantsList = styled.ul`
     position: absolute;
@@ -26,3 +27,5 @@ export const VariantsItem = styled.li`
         background-color: rgba(254, 95, 30, 0.05);
     }
 `;
+
+export const MVariantsList = motion(VariantsList);

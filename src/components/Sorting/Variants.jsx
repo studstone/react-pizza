@@ -1,27 +1,30 @@
 import React from 'react';
-import { VariantsItem, VariantsList } from '../Sorting/styles/StyledVariants';
+import { AnimatePresence } from 'framer-motion';
+import { MVariantsList, VariantsItem } from '../Sorting/styles/StyledVariants';
 
-const Variants = ({ variants, activeVariants, hendlerActiveVariant }) => {
+const Variants = ({ variants, activeVariants, hendlerActiveVariant, hidden, visible }) => {
     console.log();
 
-
-
     return (
-        <VariantsList>
-            {
-                variants.map((variant, index) =>
-                    <VariantsItem
-                        key={index}
-                        onClick={() => hendlerActiveVariant(index)}
-                        active={activeVariants === index}
-                    >
-                        {variant}
-                    </VariantsItem>)
-            }
-            {/* <VariantsItem>по пулярности</VariantsItem>
-            <VariantsItem>по цене</VariantsItem>
-            <VariantsItem>по алфавиту</VariantsItem> */}
-        </VariantsList>
+        <AnimatePresence>
+            <MVariantsList
+                initial={hidden}
+                animate={visible}
+                exit={hidden}
+                transition={{ duration: 0.4 }}
+            >
+                {
+                    variants.map((variant, index) =>
+                        <VariantsItem
+                            key={index}
+                            onClick={() => hendlerActiveVariant(index)}
+                            active={activeVariants === index}
+                        >
+                            {variant}
+                        </VariantsItem>)
+                }
+            </MVariantsList>
+        </AnimatePresence>
     );
 };
 

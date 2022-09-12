@@ -7,11 +7,13 @@ import HomePages from "./pages/HomePage/HomePages";
 import { pizzas } from './DB/pizzas';
 import { useActiveOptions } from "./hooks/useActiveOptions";
 import { useSorting } from "./hooks/useSorting";
+import { opacity } from './components/animation/opacity';
 
 function App() {
     const activeIndex = useActiveIndex();
     const activeOptions = useActiveOptions();
     const activeSorting = useSorting();
+    console.log();
 
     return (
         <>
@@ -22,6 +24,7 @@ function App() {
                     {...activeIndex}
                     {...activeOptions}
                     {...activeSorting}
+                    {...opacity}
                     categories={categories}
                     pizzas={pizzas}
                 />

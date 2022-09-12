@@ -2,7 +2,8 @@ import React from 'react';
 import { SortingText, SortingVariable, SortingWrapper } from './styles/SryledSorting';
 import Variants from './Variants';
 
-const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveVariant }) => {
+const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveVariant,
+    hiddenOpacity, visibleOpacity }) => {
     console.log();
     const variants = ['по пулярности', 'по цене', 'по алфавиту'];
 
@@ -24,6 +25,8 @@ const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveV
                     variants={variants}
                     activeVariants={activeVariants}
                     hendlerActiveVariant={hendlerActiveVariant}
+                    hidden={hiddenOpacity}
+                    visible={visibleOpacity}
                 />}
         </SortingWrapper>
     );
