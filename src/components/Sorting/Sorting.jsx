@@ -20,14 +20,14 @@ const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveV
             </svg>
             <SortingText>Сортировка по:</SortingText>
             <SortingVariable>{variants[activeVariants]}</SortingVariable>
-            {openVariants &&
-                <Variants
-                    variants={variants}
-                    activeVariants={activeVariants}
-                    hendlerActiveVariant={hendlerActiveVariant}
-                    hidden={hiddenOpacity}
-                    visible={visibleOpacity}
-                />}
+            <Variants
+                openVariants={openVariants}
+                variants={variants}
+                activeVariants={activeVariants}
+                hendlerActiveVariant={hendlerActiveVariant}
+                hidden={hiddenOpacity}
+                visible={visibleOpacity}
+            />
         </SortingWrapper>
     );
 };
