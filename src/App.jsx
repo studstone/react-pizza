@@ -6,10 +6,12 @@ import { useActiveIndex } from "./hooks/useActiveIndex";
 import HomePages from "./pages/HomePage/HomePages";
 import { pizzas } from './DB/pizzas';
 import { useActiveOptions } from "./hooks/useActiveOptions";
+import { useSorting } from "./hooks/useSorting";
 
 function App() {
     const activeIndex = useActiveIndex();
     const activeOptions = useActiveOptions();
+    const activeSorting = useSorting();
 
     return (
         <>
@@ -19,6 +21,7 @@ function App() {
                 <HomePages
                     {...activeIndex}
                     {...activeOptions}
+                    {...activeSorting}
                     categories={categories}
                     pizzas={pizzas}
                 />

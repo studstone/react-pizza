@@ -13,7 +13,9 @@ const Products = props => {
                 <Сategories
                     {...props}
                 />
-                <Sorting />
+                <Sorting
+                    {...props}
+                />
             </ProductsTop>
             <ProductsTitle>Все пиццы</ProductsTitle>
             <CardsWrapper>

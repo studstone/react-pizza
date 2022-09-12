@@ -2,16 +2,10 @@ import React from 'react';
 import { SortingText, SortingVariable, SortingWrapper } from './styles/SryledSorting';
 import Variants from './Variants';
 
-const Sorting = () => {
+const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveVariant }) => {
     console.log();
     const variants = ['по пулярности', 'по цене', 'по алфавиту'];
-    const [openVariants, setOpenVariants] = React.useState(false);
-    const [activeVariants, setAvtiveVariants] = React.useState(0);
 
-    const hendlerActiveVariant = index => {
-        setAvtiveVariants(index);
-        setOpenVariants(false);
-    };
 
     return (
         <SortingWrapper active={openVariants} onClick={() => setOpenVariants(!openVariants)}>
