@@ -7,11 +7,12 @@ import {
 const Card = ({ pizzas, activeTypes, activeSizes, hendlerActiveTypes, hendlerActiveSizes }) => {
     console.log();
     const typesName = ['тонкое', 'традиционное'];
+    const items = pizzas.pizzas;
 
     return (
         <>
             {
-                pizzas.map(pizza =>
+                items.map(pizza =>
                     <CardWrapper key={pizza.id}>
                         <ImageBlock>
                             <img src={pizza.imageUrl} alt="Pizza" />

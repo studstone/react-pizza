@@ -3,9 +3,11 @@ import { CardsWrapper, ProductsTitle, ProductsTop, Wrapper } from './styles/Styl
 import Сategories from "../Сategories/Сategories";
 import Sorting from '../Sorting/Sorting';
 import Card from '../Card/Card';
+import CardSkeleton from '../Card/CardSkeleton';
 
 const Products = props => {
     console.log();
+    const loading = props.pizzas.loading;
 
     return (
         <Wrapper>
@@ -19,9 +21,13 @@ const Products = props => {
             </ProductsTop>
             <ProductsTitle>Все пиццы</ProductsTitle>
             <CardsWrapper>
-                <Card
-                    {...props}
-                />
+                {
+                    loading ?
+                        <CardSkeleton /> :
+                        <Card
+                            {...props}
+                        />
+                }
             </CardsWrapper>
         </Wrapper>
     );
