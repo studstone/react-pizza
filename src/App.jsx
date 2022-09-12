@@ -4,15 +4,17 @@ import GlobalStyle, { Wrapper } from "./components/styles/GlobalStyle";
 import { categories } from "./DB/categories";
 import { useActiveIndex } from "./hooks/useActiveIndex";
 import HomePages from "./pages/HomePage/HomePages";
-import { pizzas } from './DB/pizzas';
+// import { pizzas } from './DB/pizzas';
 import { useActiveOptions } from "./hooks/useActiveOptions";
 import { useSorting } from "./hooks/useSorting";
 import { opacity } from './components/animation/opacity';
+import { usePizzas } from "./hooks/usePizzas";
 
 function App() {
     const activeIndex = useActiveIndex();
     const activeOptions = useActiveOptions();
     const activeSorting = useSorting();
+    const pizzas = usePizzas();
     console.log();
 
     return (
