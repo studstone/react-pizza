@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const CartWrapper = styled.section`
     padding: ${({ active }) => (active ? '9.4rem 22.4rem 13.1rem 29.5rem' : '16.3rem 39.6rem')};
@@ -49,4 +50,6 @@ export const CartLink = styled(Link)`
         background-color: #464646;
     }
 `;
+
+export const MCartWrapper = motion(CartWrapper);
 

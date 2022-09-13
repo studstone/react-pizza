@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 import { variable } from "../../styles/Variable";
 
 export const Wrapper = styled.section`
@@ -27,3 +28,5 @@ export const CardsWrapper = styled.ul`
     flex-wrap: wrap;
     gap: 3rem 6.16rem;
 `;
+
+export const MWrapper = motion(Wrapper);

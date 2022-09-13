@@ -42,7 +42,9 @@ function App() {
                     />
                     <Route path="cart"
                         element={
-                            <CartPages />
+                            <CartPages
+                                {...opacity}
+                            />
                         }
                     />
                 </Route>
