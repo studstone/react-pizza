@@ -11,7 +11,7 @@ import Cart from './Cart';
 
 const Header = () => (
     <HeaderWrapper>
-        <LogoLink href="#">
+        <LogoLink to='/'>
             <LogoImg src={Logo} alt="Image: Logo" />
             <LogoDescription>
                 <HeaderTitle>REACT PIZZA</HeaderTitle>
@@ -19,7 +19,7 @@ const Header = () => (
             </LogoDescription>
         </LogoLink>
         <CartWrapper>
-            <CartBtn href="#">
+            <CartBtn to='/cart'>
                 <span>520 ₽</span>
                 <BorderRight></BorderRight>
                 <Cart />

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { variable } from "../../styles/Variable";
+import { Link } from 'react-router-dom';
+
 
 export const HeaderWrapper = styled.header`
     display: flex;
@@ -9,7 +11,7 @@ export const HeaderWrapper = styled.header`
     border-bottom: 0.1rem solid #F7F7F7;
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +69,7 @@ export const CartWrapper = styled.div`
     }
 `;
 
-export const CartBtn = styled.a`
+export const CartBtn = styled(Link)`
     display: flex;
     align-items: center;
     font-weight: 700;
