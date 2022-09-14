@@ -22,10 +22,12 @@ const Products = props => {
             >
                 <ProductsTop>
                     <Сategories
-                        {...props}
+                        {...props.pizzas}
+                        categories={props.categories}
                     />
                     <Sorting
                         {...props}
+                        {...props.pizzas}
                     />
                 </ProductsTop>
                 <ProductsTitle>Все пиццы</ProductsTitle>

@@ -2,7 +2,7 @@ import React from 'react';
 import { TabItem, TabsList } from './styles/StyledCategories';
 
 
-const Сategories = ({ activeIndex, hendlerActive, categories }) => {
+const Сategories = ({ activeCategory, hendlerActiveCategory, categories }) => {
     console.log();
 
     return (
@@ -11,8 +11,8 @@ const Сategories = ({ activeIndex, hendlerActive, categories }) => {
                 categories.map((tab, index) =>
                     <TabItem
                         key={index}
-                        onClick={() => hendlerActive(index)}
-                        active={activeIndex === index}
+                        onClick={() => hendlerActiveCategory(index)}
+                        active={activeCategory === index}
                     >
                         {tab}
                     </TabItem>)

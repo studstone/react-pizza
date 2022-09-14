@@ -4,8 +4,12 @@ import Variants from './Variants';
 
 const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveVariant,
     hiddenOpacity, visibleOpacity }) => {
+    const variants = [
+        { name: 'пулярности', sortProperty: 'rating' },
+        { name: 'цене', sortProperty: 'price' },
+        { name: 'алфавиту', sortProperty: 'name' }
+    ];
     console.log();
-    const variants = ['по пулярности', 'по цене', 'по алфавиту'];
 
 
     return (
@@ -19,7 +23,7 @@ const Sorting = ({ openVariants, setOpenVariants, activeVariants, hendlerActiveV
             5Z" fill="#2C2C2C" />
             </svg>
             <SortingText>Сортировка по:</SortingText>
-            <SortingVariable>{variants[activeVariants]}</SortingVariable>
+            <SortingVariable>{activeVariants.name}</SortingVariable>
             <Variants
                 openVariants={openVariants}
                 variants={variants}

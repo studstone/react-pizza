@@ -18,10 +18,10 @@ const Variants = ({ variants, openVariants, activeVariants, hendlerActiveVariant
                         variants.map((variant, index) =>
                             <VariantsItem
                                 key={index}
-                                onClick={() => hendlerActiveVariant(index)}
-                                active={activeVariants === index}
+                                onClick={() => hendlerActiveVariant(variant)}
+                                active={activeVariants.sortProperty === variant.sortProperty}
                             >
-                                {variant}
+                                {variant.name}
                             </VariantsItem>)
                     }
                 </MVariantsList>
